@@ -1,0 +1,19 @@
+{
+  "name": "friend-cleanup-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "db:migrate": "wrangler d1 migrations apply friend-cleanup-db"
+  },
+  "dependencies": {
+    "hono": "^4.2.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240405.0",
+    "typescript": "^5.4.5",
+    "wrangler": "^4.33.2"
+  }
+}

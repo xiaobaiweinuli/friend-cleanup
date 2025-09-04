@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    /* Base Options */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    /* If NOT transpiling with ts-loader or @swc/core. */
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "noEmit": true,
+
+    /* If your project is a library. */
+    // "declaration": true,
+
+    /* If you're building for a library that uses DOM APIs. */
+    // "lib": ["esnext", "dom", "dom.iterable"],
+
+    /* If you're building for a Node.js project. */
+    "types": [
+      "@cloudflare/workers-types"
+    ],
+    
+    /* Hono-specific */
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx"
+  },
+  "include": ["src"]
+}

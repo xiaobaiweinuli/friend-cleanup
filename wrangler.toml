@@ -1,0 +1,38 @@
+name = "friend-cleanup-system"
+main = "src/worker.js"
+workers_dev = false
+compatibility_date = "2025-01-01"
+compatibility_flags = [ "nodejs_compat" ]
+
+[[routes]]
+pattern = "haoyou.xingshuang.xyz"
+zone_name = "xingshuang.xyz"
+custom_domain = true
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+  [observability.logs]
+  enabled = true
+  head_sampling_rate = 1
+  invocation_logs = true
+
+[vars]
+ADMIN_PASSWORD = "密码"
+ADMIN_USERNAME = "账号"
+ENCRYPTION_KEY = " QGxeRTbcxy1ag="
+ENVIRONMENT = "production"
+JWT_SECRET = "gcLZdIolGwfcIJ9X "
+RATE_LIMIT_MAX_REQUESTS = "5"
+RATE_LIMIT_WINDOW = "60"
+SESSION_TIMEOUT = "3600"
+
+[[kv_namespaces]]
+id = "3f887d080fa64cfa**89f"
+binding = "CACHE"
+
+[[d1_databases]]
+binding = "DB"
+database_id = "927b86ef-d5ca**438f404c"
+database_name = "friend-cleanup-db"
